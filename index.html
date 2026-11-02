@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Highway Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND SONG -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="background.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ================= MENU ================= -->
+
+    <section id="menu">
+
+        <div class="menu-bg">
+
+            <div class="menu-road"></div>
+
+            <div class="menu-tree tree-a">🌳</div>
+            <div class="menu-tree tree-b">🌲</div>
+            <div class="menu-tree tree-c">🌳</div>
+
+        </div>
+
+        <div class="menu-card">
+
+            <div class="game-logo">🏍️</div>
+
+            <h1>HIGHWAY RUSH</h1>
+
+            <p class="tagline">
+                DODGE • RIDE • SURVIVE
+            </p>
+
+            <div class="best-record">
+                <span>🏆 BEST RECORD</span>
+                <strong id="menuBest">0</strong>
+            </div>
+
+            <p class="choose-text">
+                CHOOSE DIFFICULTY
+            </p>
+
+            <div class="difficulty-buttons">
+
+                <button class="difficulty easy" data-level="easy">
+                    <strong>EASY</strong>
+                    <small>Relaxed Traffic</small>
+                </button>
+
+                <button class="difficulty hard" data-level="hard">
+                    <strong>HARD</strong>
+                    <small>Fast Traffic</small>
+                </button>
+
+                <button class="difficulty expert" data-level="expert">
+                    <strong>EXPERT</strong>
+                    <small>Extreme Traffic</small>
+                </button>
+
+            </div>
+
+            <button id="soundButton" class="sound-button">
+                🔊 SOUND ON
+            </button>
+
+            <p class="mobile-tip">
+                📱 Drag your finger to control the bike
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GAME ================= -->
+
+    <section id="game">
+
+        <!-- HUD -->
+
+        <div id="hud">
+
+            <div class="hud-box">
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="hud-box">
+                <span>BEST</span>
+                <strong id="best">0</strong>
+            </div>
+
+            <div class="hud-box">
+                <span>SPEED</span>
+                <strong id="speed">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- GAME WORLD -->
+
+        <div id="world">
+
+            <!-- SKY -->
+
+            <div class="sky">
+
+                <div class="cloud cloud-one"></div>
+                <div class="cloud cloud-two"></div>
+                <div class="cloud cloud-three"></div>
+
+            </div>
+
+
+            <!-- GRASS -->
+
+            <div class="grass left-grass"></div>
+            <div class="grass right-grass"></div>
+
+
+            <!-- ROAD -->
+
+            <div id="road">
+
+                <div class="road-edge left-edge"></div>
+                <div class="road-edge right-edge"></div>
+
+                <div class="lane-mark lane-one"></div>
+                <div class="lane-mark lane-two"></div>
+
+            </div>
+
+
+            <!-- TREES -->
+
+            <div id="trees"></div>
+
+
+            <!-- TRAFFIC -->
+
+            <div id="traffic"></div>
+
+
+            <!-- PLAYER -->
+
+            <div id="player">
+
+                <!-- helmet -->
+                <div class="rider-head">
+                    <div class="helmet-visor"></div>
+                </div>
+
+                <!-- body -->
+                <div class="rider-body"></div>
+
+                <!-- arms -->
+                <div class="rider-arm left-arm"></div>
+                <div class="rider-arm right-arm"></div>
+
+                <!-- motorcycle -->
+                <div class="bike">
+
+                    <div class="bike-wheel bike-front-wheel">
+                        <div class="wheel-line"></div>
+                    </div>
+
+                    <div class="bike-wheel bike-back-wheel">
+                        <div class="wheel-line"></div>
+                    </div>
+
+                    <div class="bike-frame"></div>
+
+                    <div class="bike-seat"></div>
+
+                    <div class="bike-handle-left"></div>
+                    <div class="bike-handle-right"></div>
+
+                    <div class="bike-light"></div>
+
+                    <div class="bike-body"></div>
+
+                    <div class="bike-red-light"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COUNTDOWN -->
+
+        <div id="countdown"></div>
+
+
+        <!-- GAME OVER -->
+
+        <div id="gameOver">
+
+            <div class="gameover-card">
+
+                <div class="crash">💥</div>
+
+                <h2>GAME OVER</h2>
+
+                <p>YOUR SCORE</p>
+                <strong id="finalScore">0</strong>
+
+                <p>BEST RECORD</p>
+                <strong id="finalBest">0</strong>
+
+                <div id="newRecord">
+                    🏆 NEW RECORD!
+                </div>
+
+                <div class="gameover-buttons">
+
+                    <button id="retry">
+                        🔄 RETRY
+                    </button>
+
+                    <button id="mainMenu">
+                        🏠 MENU
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
